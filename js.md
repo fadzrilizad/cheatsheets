@@ -203,3 +203,65 @@ let preference = lang === "Js" ? "Web Dev" : "Data Scientist";
 - All number truthy except, `0` is falsy
 - String is truth, empty sting `('')` is falsy
 - `NaN` and `Undefined` and `0/0` is falsy
+
+## Array
+
+### Create Array
+
+- const arrName = []
+
+```js
+const string = ['hello', 'world'];
+const integer = [1, 3, 4];
+const float = [32.2 2.3];
+const bool = [true, false, true]
+const collection = [[1, 3, 4], 'hello', true, NaN]
+```
+
+### Array Indices
+
+- `const arrary[index number]`
+- `.length` property
+
+### Modify Array
+
+- `const arr[index] = newValue`
+
+```js
+const buy = ["milk", "chicken"];
+const buy[0] = 'banana';
+const but[buy.length] = 'cheese'; // append to end
+```
+
+### Array Method
+
+- `arr.pop()`
+  - return deleted item
+- `arr.push(...item)`
+  - return int length
+- `arr.shift()`
+  - return deleted item
+- `arr.unshift(...item)`
+  - return int length
+- `arr1.concat(...arr2)`
+  - return new array
+- `arr.includes(item, [idx])`
+  - return boolean
+- `arr.indexOf(item, [idx])`
+  - return number of index
+  - return `-1` if not found
+- `arr.reverse()`
+  - Modified original array
+  - return reversed array
+- `arr.join('separator')`
+  - Default saperator `,`
+  - Return string with separator
+- `arr.slice(startIdx, beforeEndIdx)`
+  - Return new sliced index
+  - `arr.slice(idx)`
+    - Return idx to end
+  - `arr.slice(-1)`
+    - Return last index
+    - if `(-3)` return last 3 index
+  - `arr.slice()`
+    - Copy entire array
