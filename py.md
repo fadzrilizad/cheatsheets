@@ -1,5 +1,12 @@
 # Python cheatsheets
 
+- [Python cheatsheets](#python-cheatsheets)
+  - [Comment](#comment)
+  - [Number](#number)
+    - [Type](#type)
+    - [Math Operators](#math-operators)
+  - [Function](#function)
+
 ## Comment
 
 - `#`

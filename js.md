@@ -1,5 +1,38 @@
 # Javascript cheatsheets
 
+- [Javascript cheatsheets](#javascript-cheatsheets)
+  - [Value](#value)
+    - [Number](#number)
+      - [NaN](#nan)
+      - [Infinity](#infinity)
+      - [Number object function](#number-object-function)
+    - [String](#string)
+      - [String Method](#string-method)
+      - [String Escape Character](#string-escape-character)
+      - [String Template Literal](#string-template-literal)
+    - [Boolean](#boolean)
+      - [Double Equal comparison](#double-equal-comparison)
+      - [Triple Equal Comparison](#triple-equal-comparison)
+    - [Null \& Undefined](#null--undefined)
+  - [Variable](#variable)
+  - [Math Object](#math-object)
+  - [Operator](#operator)
+    - [Typeof](#typeof)
+    - [Boolean Operator](#boolean-operator)
+    - [Logical Operator](#logical-operator)
+    - [Operator Precedence](#operator-precedence)
+  - [Condition Statement](#condition-statement)
+    - [If Statement](#if-statement)
+      - [Nesting Condition](#nesting-condition)
+    - [Switch Stamentement](#switch-stamentement)
+    - [Ternary Operator](#ternary-operator)
+    - [Truthy \& Falsy Expression](#truthy--falsy-expression)
+  - [Array](#array)
+    - [Create Array](#create-array)
+    - [Array Indices](#array-indices)
+    - [Modify Array](#modify-array)
+    - [Array Method](#array-method)
+
 ## Value
 
 - Number
