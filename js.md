@@ -54,10 +54,15 @@
   - Return index number
   - Return `-1` not found
   - Case sensitive
-- `str.slice(start idx, [last idx])`
+- `str.slice(startIdx, [beforeEndIdx])`
   - Return from start index
-  - If had last index, return from start to last index
-- `str.replace('to_replace', 'what_to_replace)`
+  - If had second args, return from start to beforeEndIdx
+  - `str.slice(-1)`
+    - Return last char
+    - if `(-3)` return last 3 character
+  - `str.slice()`
+    - Copy entire string
+- `str.replace('toReplace', 'whatToReplace')`
   - Find first occurrence
   - Replace word, and return new string
   - With replaced word
@@ -284,13 +289,9 @@ const but[buy.length] = 'cheese'; // append to end
 - `arr.reverse()`
   - Modified original array
   - return reversed array
-- `arr.join('separator')`
-  - Default saperator `,`
-  - Return string with separator
-- `arr.slice(startIdx, beforeEndIdx)`
-  - Return new sliced index
-  - `arr.slice(idx)`
-    - Return idx to end
+- `arr.slice(startIdx, [beforeEndIdx])`
+  - Return from start index
+  - If had last index, return from start to beforeEndIdx
   - `arr.slice(-1)`
     - Return last index
     - if `(-3)` return last 3 index
