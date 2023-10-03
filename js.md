@@ -44,13 +44,37 @@
 #### String Method
 
 - `str.toUpperCase()`
+  - Return uppercase letter
 - `str.toLowerCase()`
+  - Return lowercase letter
 - `str.trim()`
+  - Return removed leading & whitespace
 - `str.indexOf('')`
-- `str.slice()`
-- `str.replace()`
-- `str.split()`
-- `str.join()`
+  - Find exact string
+  - Return index number
+  - Return `-1` not found
+  - Case sensitive
+- `str.slice(start idx, [last idx])`
+  - Return from start index
+  - If had last index, return from start to last index
+- `str.replace('to_replace', 'what_to_replace)`
+  - Find first occurrence
+  - Replace word, and return new string
+  - With replaced word
+- `str.split([" "], [Number])`
+  - Empty args, return one string in one array
+  - First argument, thing we want to remove
+  - For example space `(" ")`
+  - Each word will become one item in array
+  - `'hello world'.split(' ')` -> `['hello', 'world']`
+  - Second args is how many item we want to return
+  - `'hello world good morning'.split(' ', 2)` -> `['hello', 'world']`
+- `str.join([' '])`
+  - Empty args, default delimiter is `,`
+  - Convert array to string
+  - Each word will have delimiter
+  - Can set delimiter to any character
+  - Return new string
 
 #### String Escape Character
 
@@ -98,10 +122,17 @@
 ## Math Object
 
 - `Math.PI`
-- `Math.round()`
-- `Math.abs()`
-- `Math.pow()`
+  - Return PI number
+- `Math.round(num)`
+  - Return int rounded number
+- `Math.abs(num)`
+  - Return absolute number (always positive)
+- `Math.pow(num, power)`
+  - Power is how many time multiple by it self
+  - `Math.(5, 3)` -> `125`
 - `Math.floor()`
+  - Remove decimal
+  - `Math.floor(1.88)` -> `1`
 - `Math.random()`
   - `Math.floor(Math.random() * number) + 1` -> range from 1 to number
 
