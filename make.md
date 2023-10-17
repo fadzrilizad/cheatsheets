@@ -18,9 +18,6 @@ echo "Hello, World"
 Hello, World
 ```
 
-- `hello:` is program is anything after `:` 
-- That means the program will be depend on that object 
-
 ```bash
 blah: blah.o
 	cc blah.o -o blah
@@ -32,21 +29,16 @@ blah.c:
 	echo "int main() {return 0; }" > blah.c
 ```
 - Makefile will run top to bottom
-- If have dependencies, next line
+- After `:` is dependencies
+- If have dependencies, go next line
 - If no dependencies, run
-- If file not exist, create the file
-- It's check the timestamp if source file
-- If file exist, check the timestamp
-- If got update, run recompile the object
-- And convert to binary
-- Timestamp decide to build or not to build
 
 ```bash
 blah.c:
 	echo 'hello'
 ```
 
-- If file blah don't exist run this command
+- If file `blah.c` don't exist run this command
 - If run once again, not detect if update or not
 - Because file blah not exist
 
@@ -57,17 +49,17 @@ targets: prerequisites
     command
 ```
 - `targets` are filename
-- Separated by space
+- Separated by _space_
 - Typically only on per rule
 - `command` are series of step
 - To make the target
-- To write command, need to start with tab
-- Not use space for indentation
-- Prerequisites also file name 
-- Separates by spaces
-- It must be exist before command for
-- The target are run
-- Also called dependencies
+- To write command, start with **tab**
+- Don' use space for indentation
+- `prerequisites` also **file name**
+- Separates by _spaces_
+- It must be **exist** before 
+- The target run
+- Also called **dependencies**
 
 ```bash
 hello:
@@ -84,41 +76,34 @@ echo 'this will run if file not exist'
 this will run if file not exist
 ```
 
-- As long hello is not exist
-- Command will run, if exist not run
-- Targets and file are same thing
-- If no prerequisites, make not check file is
-- Update or not, if only check it if exist or not
-- To solve it, we must add prerequisites
+- As long hello is _not exist_
+- Command will run, if _exist_ not run
+- _Targets_ and _file_ are same thing
+- If no _prerequisites_, make not check _file_ 
 
 ```bash
 blah: blah.c
 	gcc -c blah.c -o blah
 ```
 
-- The logic is if not exist `||` `blah.c` is newer timestamp
-- Run the command, (don't change timestamp)
+- The logic is `if not exist` or `blah.c` is newer timestamp
+- Run the command, (don't manuallly change change timestamp)
 - Command will run only after dependencies are finished
-- Dependencies, no need to be in real file
-- If dependencies on memory, it also run
-- Basically make file, create target in memory first
-- The command will create to the file
 
-```bash
-some_file: other_file
-	echo "This will always run, and runs second"
-	touch some_file
-
-other_file:
-	echo "This will always run, and runs first"
-```
+## Clean
 
 - `clean` often use to remove output of targets
 - It's not special keyword in `Makefile`
-- It's target, not the first `make` only run first target
 - If we want clean, we must explicitly call `make clean`
 - It's not intended as filename, if has filename `clean`
 - The target won't run
+```bash
+some_file: 
+	touch some_file
+
+clean:
+	rm -f some_file
+```
 
 ## Variable
 
